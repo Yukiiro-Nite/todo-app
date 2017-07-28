@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {setDone, editTodo, removeTodo} from '../../actions/todoActions';
+import {setDone, setEdit, removeTodo} from '../../actions/todoActions';
 import './todoOptions.css';
 
-export const TodoOptions = ({ todoId, isDone, isEditing, setDone, editTodo, removeTodo }) =>
+export const TodoOptions = ({ todoId, isDone, isEditing, setDone, setEdit, removeTodo }) =>
   <div className="TodoOptions">
     <input
       type="checkbox"
@@ -13,9 +13,9 @@ export const TodoOptions = ({ todoId, isDone, isEditing, setDone, editTodo, remo
     />
     <span
       className={ `TodoOptions-${ isEditing ? 'editing' : 'not-editing'}` }
-      onClick={ () => editTodo(todoId, !isEditing) }
+      onClick={ () => setEdit(todoId, !isEditing) }
     >
-      Edit
+      { isEditing ? 'Stop Editing' : 'Edit' }
     </span>
     <span className="TodoOptions-remove" onClick={ () => removeTodo(todoId) }>Remove</span>
   </div>;
@@ -27,7 +27,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = {
   setDone,
-  editTodo,
+  setEdit,
   removeTodo
 };
 

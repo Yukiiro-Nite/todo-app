@@ -1,6 +1,5 @@
-export const createTodo = (todo) => ({
-  type: "CREATE_TODO",
-  todo
+export const createTodo = () => ({
+  type: "CREATE_TODO"
 });
 
 export const setDone = (id, isDone) => ({
@@ -9,10 +8,16 @@ export const setDone = (id, isDone) => ({
   isDone
 });
 
-export const editTodo = (id, isEditing) => ({
-  type: "EDIT_TODO",
+export const setEdit = (id, isEditing) => ({
+  type: "SET_EDIT",
   id,
   isEditing
+});
+
+export const editTodo = (id, todo) => ({
+  type: "EDIT_TODO",
+  id,
+  todo
 });
 
 export const removeTodo = (id) => ({
