@@ -1,0 +1,14 @@
+.Todo-header {
+  display: flex;
+  align-items: center;
+}
+
+.Todo-title {
+  display: inline-block;
+  margin: 5px;
+}
+
+.Todo-description {
+  margin-left: 20px;
+  margin-top: 0px;
+}

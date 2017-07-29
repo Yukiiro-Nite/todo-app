@@ -4,9 +4,9 @@ import './todo.css';
 
 export const Todo = ({ todoId, title, description }) =>
   <div className="Todo">
-    <div>
-      <h4>{ title }</h4>
+    <div className="Todo-header">
+      <h4 className="Todo-title">{ title }</h4>
       <TodoOptions todoId={ todoId }/>
     </div>
-    <p>{ description }</p>
+    <p className="Todo-description">{ description }</p>
   </div>;

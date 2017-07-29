@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {setDone, setEdit, removeTodo} from '../../actions/todoActions';
 import './todoOptions.css';
 
-export const TodoOptions = ({ todoId, isDone, isEditing, setDone, setEdit, removeTodo }) =>
+export const TodoOptions = ({ todoId, isDone=false, isEditing, setDone, setEdit, removeTodo }) =>
   <div className="TodoOptions">
     <input
       type="checkbox"
